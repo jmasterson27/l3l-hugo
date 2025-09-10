@@ -2,49 +2,43 @@ baseURL = "https://layer3logic.com/"
 languageCode = "en-us"
 title = "Layer 3 Logic"
 
-theme = "hugo-bootstrap-theme"
+theme     = "hugo-bootstrap-theme"
 themesdir = "node_modules/@filipecarneiro"
 
-# Main navigation.  These items mirror the navigation on the original
-# HTML site.  Anchor links (e.g., `#services`) refer to sections on the
-# homepage.  The Resources menu item links to the list of blog posts.
+# Main navigation
 [menu]
   [[menu.main]]
-    name = "Home"
-    url = "/"
+    name   = "Home"
+    url    = "/"
     weight = 1
-
   [[menu.main]]
-    name = "Services"
-    url = "/#services"
+    name   = "Services"
+    url    = "/#services"
     weight = 2
-
   [[menu.main]]
-    name = "About"
-    url = "/#about"
+    name   = "About"
+    url    = "/#about"
     weight = 3
-
   [[menu.main]]
-    name = "Resources"
-    url = "/posts/"
+    name   = "Resources"
+    url    = "/posts/"
     weight = 4
-
   [[menu.main]]
-    name = "Get Connected"
-    url = "/#contact"
+    name   = "Get Connected"
+    url    = "/#contact"
     weight = 5
 
-  # Optional: social links (shown by the theme)
+  # Social links for the footer/header
   [[menu.social]]
-    name = "LinkedIn"
-    url  = "https://www.linkedin.com/company/layer3logic/"
+    name   = "LinkedIn"
+    url    = "https://www.linkedin.com/company/layer3logic/"
     weight = 1
 
-# Parameters used by the theme.  Many of these come from the theme’s exampleSite
-# configuration.  They set up the site description and contact information
-# displayed in the footer.  Feel free to adjust these values later.
+# Site parameters
 [params]
   description = "Layer 3 Logic delivers expert IT system architecture, security consulting and procurement services for modern businesses."
   copyright   = "© 2025 Layer 3 Logic"
 
-# IMPORTANT: make params.social a table (single bracket), not an array.
+# Make params.social a table, not an array
+[params.social]
+  facebook_admin = ""   # leave blank if unused
