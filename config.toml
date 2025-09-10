@@ -2,13 +2,8 @@ baseURL = "https://layer3logic.com/"
 languageCode = "en-us"
 title = "Layer 3 Logic"
 
-# Use the Hugo Bootstrap Theme as a Hugo Module.  At build time, Hugo will
-# automatically fetch the theme from its GitHub repository.  No theme code
-# is stored in this repo, which keeps the repository light-weight.  See
-# https://gohugo.io/hugo-modules/use-modules/ for details.
-[module]
-  [[module.imports]]
-    path = "github.com/filipecarneiro/hugo-bootstrap-theme"
+theme = "hugo-bootstrap-theme"
+themesdir = "node_modules/@filipecarneiro"
 
 # Main navigation.  These items mirror the navigation on the original
 # HTML site.  Anchor links (e.g., `#services`) refer to sections on the
@@ -51,13 +46,3 @@ title = "Layer 3 Logic"
     name = "LinkedIn"
     icon = "linkedin"
     url  = "https://www.linkedin.com/company/layer3logic/"
-
-  [[params.social]]
-    name = "Facebook"
-    icon = "facebook"
-    url  = "https://www.facebook.com/layer3logic/"
-
-  [[params.social]]
-    name = "Twitter"
-    icon = "twitter"
-    url  = "https://twitter.com/layer3logic"
