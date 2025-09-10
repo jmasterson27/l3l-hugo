@@ -34,15 +34,19 @@ themesdir = "node_modules/@filipecarneiro"
     url = "/#contact"
     weight = 5
 
+  # Optional: social links (shown by the theme)
+  [[menu.social]]
+    name = "LinkedIn"
+    url  = "https://www.linkedin.com/company/layer3logic/"
+    weight = 1
+
 # Parameters used by the theme.  Many of these come from the theme’s exampleSite
 # configuration.  They set up the site description and contact information
 # displayed in the footer.  Feel free to adjust these values later.
 [params]
   description = "Layer 3 Logic delivers expert IT system architecture, security consulting and procurement services for modern businesses."
-  copyright   = "© 2025 Layer 3 Logic"
+  copyright   = "© 2025 Layer 3 Logic"
 
-  # Social icons in the footer.  Comment out entries you don't need.
-  [[params.social]]
-    name = "LinkedIn"
-    icon = "linkedin"
-    url  = "https://www.linkedin.com/company/layer3logic/"
+# IMPORTANT: make params.social a table (single bracket), not an array.
+[params.social]
+  facebook_admin = ""   # keep blank if you don't use Facebook
