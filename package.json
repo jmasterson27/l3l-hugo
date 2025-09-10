@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@filipecarneiro/hugo-bootstrap-theme": "latest"
+  },
+  "scripts": {
+    "build": "hugo --minify"
+  }
+}
