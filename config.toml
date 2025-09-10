@@ -1,0 +1,63 @@
+baseURL = "https://layer3logic.com/"
+languageCode = "en-us"
+title = "Layer 3 Logic"
+
+# Use the Hugo Bootstrap Theme as a Hugo Module.  At build time, Hugo will
+# automatically fetch the theme from its GitHub repository.  No theme code
+# is stored in this repo, which keeps the repository light-weight.  See
+# https://gohugo.io/hugo-modules/use-modules/ for details.
+[module]
+  [[module.imports]]
+    path = "github.com/filipecarneiro/hugo-bootstrap-theme"
+
+# Main navigation.  These items mirror the navigation on the original
+# HTML site.  Anchor links (e.g., `#services`) refer to sections on the
+# homepage.  The Resources menu item links to the list of blog posts.
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Services"
+    url = "/#services"
+    weight = 2
+
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
+    weight = 3
+
+  [[menu.main]]
+    name = "Resources"
+    url = "/posts/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Get Connected"
+    url = "/#contact"
+    weight = 5
+
+# Parameters used by the theme.  Many of these come from the theme’s exampleSite
+# configuration.  They set up the site description and contact information
+# displayed in the footer.  Feel free to adjust these values later.
+[params]
+  description = "Layer 3 Logic delivers expert IT system architecture, security consulting and procurement services for modern businesses."
+  copyright   = "© 2025 Layer 3 Logic"
+
+  # Social icons in the footer.  Comment out entries you don't need.
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "linkedin"
+    url  = "https://www.linkedin.com/company/layer3logic/"
+
+  [[params.social]]
+    name = "Facebook"
+    icon = "facebook"
+    url  = "https://www.facebook.com/layer3logic/"
+
+  [[params.social]]
+    name = "Twitter"
+    icon = "twitter"
+    url  = "https://twitter.com/layer3logic"

@@ -1,0 +1,100 @@
+{{/*
+  Home page layout for Layer 3 Logic.  This template overrides the theme’s
+  default index and recreates the sections from the original static site.
+  It uses Bootstrap classes provided by the theme and custom classes defined
+  in static/css/style.css to maintain the original colour palette and
+  interactive behaviours.
+*/}}
+
+{{ define "main" }}
+
+<!-- Hero section -->
+<section class="hero-section text-white py-5" id="home">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-3">Secure and Simplify Your Network</h1>
+    <p class="lead mb-4">Expert network design &amp; cybersecurity services tailored for your business.</p>
+    <a href="#services" class="btn btn-primary cta-button me-2">Learn&nbsp;More</a>
+    <a href="#contact" class="btn btn-secondary cta-button">Get&nbsp;Connected</a>
+  </div>
+</section>
+
+<!-- Services section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body service-card-content">
+            <h3 class="h5">Network Assessment &amp; Security</h3>
+            <p>We evaluate your current network, identify vulnerabilities and design a secure, scalable architecture.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body service-card-content">
+            <h3 class="h5">Microsoft&nbsp;365 &amp; Azure Cloud</h3>
+            <p>Unlock productivity with Microsoft&nbsp;365 licences and Azure services backed by built‑in security and compliance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body service-card-content">
+            <h3 class="h5">Consulting &amp; Support</h3>
+            <p>From system design and procurement to ongoing support, we provide expert guidance at every step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">About&nbsp;Us</h2>
+    <p class="mb-4">Layer 3 Logic delivers expert IT system architecture, security consulting and procurement services for modern businesses.  Whether you need to design a new network, migrate to the cloud or secure your endpoints, our team provides personalised solutions and white‑glove support.</p>
+  </div>
+</section>
+
+<!-- Resources CTA -->
+<section id="resources" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title">Resources</h2>
+    <p class="mb-4">Explore our latest articles and guides on network design, cloud solutions and cybersecurity best practices.</p>
+    <a href="/posts/" class="btn btn-primary cta-button">Visit the Blog</a>
+  </div>
+</section>
+
+<!-- Contact section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Get Connected</h2>
+    <p class="mb-4">Ready to transform your network or need expert advice?  Reach out to us today.</p>
+    <!-- Simple contact form; submissions can be routed via Cloudflare Pages Forms or Netlify Forms -->
+    <form name="contact" method="POST" data-netlify="true">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="company" placeholder="Company">
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="tel" class="form-control" name="phone" placeholder="Phone">
+        </div>
+        <div class="col-12 mb-3">
+          <textarea class="form-control" name="message" rows="4" placeholder="How can we help?" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary cta-button">Submit</button>
+    </form>
+  </div>
+</section>
+
+{{ end }}

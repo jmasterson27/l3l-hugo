@@ -1,0 +1,30 @@
+{{/*
+  This file overrides the theme’s default stylesheet partial.  It compiles
+  the theme’s SCSS into a CSS file and then includes our custom style
+  sheet.  The compiled CSS is fingerprinted in production for cache
+  busting.
+*/}}
+
+{{- $sassOptions := dict "targetPath" "css/style.css" "enableSourceMap" true "outputStyle" "expanded" "precision" 6 -}}
+{{ if eq hugo.Environment "production" -}}
+  {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
+{{- end -}}
+
+{{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions -}}
+
+{{ if eq (hugo.Environment) "development" -}}
+  {{/* In development, include the unminified CSS directly. */}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ else -}}
+  {{/* In production, fingerprint the CSS for cache busting. */}}
+  {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}">
+{{ end -}}
+
+{{/*
+  Include our custom stylesheet.  Hugo will serve files from the
+  `static` directory at the root of the generated site.  This
+  stylesheet preserves the colour palette and styling of the
+  original static site.
+*/}}
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
