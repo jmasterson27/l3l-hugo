@@ -48,5 +48,3 @@ themesdir = "node_modules/@filipecarneiro"
   copyright   = "© 2025 Layer 3 Logic"
 
 # IMPORTANT: make params.social a table (single bracket), not an array.
-[params.social]
-  facebook_admin = ""   # keep blank if you don't use Facebook
